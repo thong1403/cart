@@ -1,0 +1,50 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": [
+    {
+      "id": 0,
+      "name": "Air Pods Pro",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dicta asperiores veniam repellat unde debitis quisquam magnam magni ut deleniti!",
+      "image": "https://cdn.tgdd.vn/Products/Images/54/236016/bluetooth-airpods-2-apple-mv7n2-imei-1-org.jpg",
+      "value": 1,
+      "denominations": 12
+    },
+    {
+      "id": 1,
+      "name": "MACBOOK",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dicta asperiores veniam repellat unde debitis quisquam magnam magni ut deleniti!",
+      "image":"https://macstores.vn/tin-tuc/wp-content/uploads/2020/11/hinh-anh-macbook-air-chip-m1-1.jpg",
+      "value": 1,
+      "denominations": 12
+    },
+    {
+      "id": 2,
+      "name":"IPHONE 14 PROMAX",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dicta asperiores veniam repellat unde debitis quisquam magnam magni ut deleniti!",
+      "image": "https://images.fpt.shop/unsafe/filters:quality(5)/fptshop.com.vn/Uploads/images/2015/ThienNDDD/iPhone-14-Pro.jpg",
+      "value": 1,
+      "denominations": 12
+    },
+    {
+      "id": 3,
+      "name": "Sam Sung Galaxy S22 Ultra",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dicta asperiores veniam repellat unde debitis quisquam magnam magni ut deleniti!",
+      "image": "https://m.media-amazon.com/images/I/71HUnJvHsbL._SL1500_.jpg",
+      "value": 1,
+      "denominations": 12
+    }
+  ]
+}
