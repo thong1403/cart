@@ -5,7 +5,7 @@ function Purchase(props) {
   console.log(props.name.denominations);
   const [quantity, setquantity] = useState([]);
   const handleChange = (e) => {
-    e.preventDefault();
+    e.preventDefault1();
   };
 
   console.log(quantity);
