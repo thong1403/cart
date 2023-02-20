@@ -1,5 +1,6 @@
 import "./css/Pruchase.css";
 import { useState } from "react";
+import  axios  from 'axios';
 
 function Purchase(props) {
   console.log(props.name.denominations);
@@ -7,6 +8,13 @@ function Purchase(props) {
   const handleChange = (e) => {
     e.preventDefault1();
   };
+  const hendleClick = () => {
+    let id = props.name.id
+    axios.delete(`http://localhost:3000/profile/${id}`)
+    .then((data) => console.log(data.data))
+    .catch((err) => console.log(err))
+    console.log(id);
+  }
 
   console.log(quantity);
 
@@ -33,6 +41,7 @@ function Purchase(props) {
                 name="cart-item-quantity-1"
                 type="number"
                 min="1"
+                value={props.name.value}
                 className="number-cart-input"
               />
             </form>
@@ -40,7 +49,7 @@ function Purchase(props) {
             <h5>{props.name.denominations} USD</h5>
             <div>
               <button id="update">Update</button>
-              <button id="delete">Delete</button>
+              <button id="delete" onClick={hendleClick}>Delete</button>
             </div>
           </div>
           <div className="project-title">

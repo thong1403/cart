@@ -12,17 +12,33 @@ function Content_cart() {
       .catch((err) => console.log(err));
   }, []);
   const handleClick = (e) => {
-    console.log(e.target.id);
-    const array = post.find(a=>a.id == e.target.id)
-    setName(array)
+   let id = e.target.id;
+
+    const array = post.find((a) => a.id == e.target.id);
+    const data = {
+      id: name.id,
+      name: name.name,
+      content: name.content,
+      image: name.image,
+      value: name.value + 1,
+      denominations: name.denominations + 12
+    }
     
-    // console.log(array);
+    setName(array);
+    setPut(array.value)
+    axios.put(`http://localhost:3000/profile/${id}`, data  )
+    .then((data) => console.log(data.data))
+    .catch((err) => console.log(err))
+    
+    console.log(array);
   };
   const [post, setPost] = useState([]);
-  const [name, setName] = useState([])
-  // console.log(name);
+  const [name, setName] = useState([]);
+  const [number, setNumber] = useState([]);
+  const [put, setPut] = useState([])
+  console.log(name);
 
-  // console.log(post);
+  // console.log(name);
   return (
     <>
       <div className="container">
@@ -55,8 +71,7 @@ function Content_cart() {
                               onClick={handleClick}
                               id={id}
                             >
-                              {" "}
-                              12 USD{" "}
+                              12 USD
                             </button>
                           </div>
                         </div>
@@ -65,7 +80,7 @@ function Content_cart() {
                   })}
             </div>
           </div>
-          <PushManager name={name}/>
+          <PushManager name={name} />
         </div>
       </div>
     </>
